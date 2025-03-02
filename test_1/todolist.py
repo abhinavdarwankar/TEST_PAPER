@@ -1,9 +1,5 @@
-# To-Do List Program in Python
-
-# List to store the tasks
 todo_list = []
 
-# Function to display the tasks
 def show_tasks():
     if len(todo_list) == 0:
         print("Your to-do list is empty!")
@@ -12,13 +8,12 @@ def show_tasks():
         for i, task in enumerate(todo_list, start=1):
             print(f"{i}. {task}")
 
-# Function to add a task to the list
+
 def add_task():
     task = input("Enter the task you want to add: ")
     todo_list.append(task)
     print(f"'{task}' has been added to your to-do list.")
 
-# Function to remove a task from the list
 def remove_task():
     show_tasks()
     try:
@@ -31,7 +26,7 @@ def remove_task():
     except ValueError:
         print("Please enter a valid number.")
 
-# Function to mark a task as completed
+
 def mark_task_completed():
     show_tasks()
     try:
@@ -45,7 +40,7 @@ def mark_task_completed():
     except ValueError:
         print("Please enter a valid number.")
 
-# Main menu function to interact with the user
+
 def main_menu():
     while True:
         print("\n--- To-Do List ---")
@@ -71,6 +66,6 @@ def main_menu():
         else:
             print("Invalid choice, please try again.")
 
-# Start the program
+
 if __name__ == "__main__":
     main_menu()
